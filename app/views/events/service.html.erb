@@ -1,18 +1,22 @@
-<header> <strong>НАШІ ПОСЛУГИ </strong>
+<header>  <font color=##0000FF> <font size = "100>"<strong>НАШІ ПОСЛУГИ </strong>  </font> </font>
  </header>
  <br/>
  <ul>
  <%@events.each do |event|%>
  <li>
+   <font color=##800000>  <font size = "90"
    <strong><%=event.name%></strong>
    in <%= event.location %>:
    <%= price(event)%>
+   </font>
+   </font>
    </li>
    <p>
      <%= truncate(event.description, length: 35, separator: '') %>
      </p>
    <p>
-   Найближча вільна дата: <%= date_and_time(event) %>
+     <font color=##0000FF> <font size = "60">
+   Найближча вільна дата: <%= date_and_time(event) %> </font> </font>
      </p>
  <%end%>
  </ul>
